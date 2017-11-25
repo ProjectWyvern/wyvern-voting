@@ -1,0 +1,86 @@
+@import url("bulma.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
+
+html, body {
+  background: #000;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+  font: 1em "Raleway", sans-serif;
+}
+
+a {
+  color: #e12d32;
+}
+
+a:visited {
+  color: #e12d32 !important;
+}
+
+.minpadding {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.header {
+	font: 5em "Raleway", sans-serif;
+}
+
+.subheader {
+  font: 3em "Raleway", sans-serif;
+}
+
+.subsubheader {
+  font: 2em "Raleway", sans-serif;
+}
+
+.green {
+  color: lime;
+}
+
+.red {
+  color: #e12d32;
+}
+
+.submit {
+  color: #fff;
+  background: #000;
+  border: 1px solid #fff;
+}
+
+.text {
+  color: #fff;
+  background: #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.text:focus {
+  outline: none !important;
+  border-bottom: 2px solid #fff;
+};
+
+.blackbg {
+  background: #000;
+}

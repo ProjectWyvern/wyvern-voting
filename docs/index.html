@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wyvern ERC20 Voting</title>
+  <meta property="og:url"                content="https://vote.projectwyvern.com" />
+  <meta property="og:type"               content="business.business" />
+  <meta property="og:title"              content="Wyvern ERC20 Voting" />
+  <meta property="og:description"        content="Vote for whether or not you would like the Wyvern cryptocurrency to be ported to an ERC20 token." />
+  <meta property="og:image"              content="https://vote.projectwyvern.com/img/logo-square-red-transparent-400x400.png" />
+  <meta name="description" content="Vote for whether or not you would like the Wyvern cryptocurrency to be ported to an ERC20 token." />
+  <link rel="shortcut icon" href="img/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+  <header>
+  <section class="hero is-medium">
+    <div class="hero-body minpadding">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-5"></div>
+          <div class="column is-2">
+            <figure>
+              <img class="image image-center" src="img/logo-square-red-transparent-400x400.png">
+            </figure>
+          </div>
+          <div class="column is-5"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </header>
+  <section class="hero">
+    <div class="hero-head">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-3"></div>
+          <div class="column is-6">
+            <h1 class="subheader center">ERC20 Port Voting</h1>
+            <div class="column is-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3"></div>
+        <div class="column is-6">
+          <h1 class="header-paragraph">
+          Project Wyvern is considering porting the Wyvern cryptocurrency to an ERC20 token. For background please see <a href="#">Project Wyvern - The Plan</a>. For information about what the WYV token will be used for please see <a href="https://token.projectwyvern.com">token.projectwyvern.com</a>. We think this is the path most likely to lead to long-term success - but the decision, as stakeholders, is yours, and we'll follow the community consensus. This voting protocol is trustless - if you'd like, you can verify the results yourself, check out the code <a href="https://github.com/ProjectWyvern/wyvern-voting">here</a>.
+          </h1>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3"></div>
+        <div class="column is-6">
+          <h1 class="subsubheader center">Wyvern in favor:</h1><br />
+          <h1 class="subsubheader center green" id="inFavor">
+          &nbsp;
+          </h1>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3"></div>
+        <div class="column is-6">
+          <h1 class="subsubheader center">Wyvern against:</h1><br />
+          <h1 class="subsubheader center red" id="against">
+          &nbsp;
+          </h1>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3"></div>
+        <div class="column is-6">
+          <h1 class="subsubheader center">Total Wyvern voting:</h1><br />
+          <h1 class="subsubheader center" id="total">
+          &nbsp;
+          </h1>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3"></div>
+        <div class="column is-6">
+          <h1 class="header-paragraph">
+          In order to vote, sign the message "true", to declare that you support the ERC20 port, or "false", to declare that you do not support it, with your Wyvern address, then enter the signature and your vote below. It will take the webpage a few seconds to update.
+          </h1>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4"></div>
+        <div class="column is-4 blackbg"><input class="text" type="text" id="address" placeholder="Wyvern Address" size="40"></input></div>
+        <div class="column is-4"></div>
+      </div>
+      <div class="columns">
+        <div class="column is-5"></div>
+        <div class="column is-2 blackbg"><input type="checkbox" id="checkbox" checked> Support ERC20 Port</input></div>
+        <div class="column is-5"></div>
+      </div>
+      <div class="columns">
+        <div class="column is-4"></div>
+        <div class="column is-4 blackbg"><input class="text" type="text" id="signature" placeholder="Signature (Base64)" size="40"></input></div>
+        <div class="column is-4"></div>
+      </div>
+      <div class="columns">
+        <div class="column is-5"></div>
+        <div class="column is-2 center blackbg"><button class="submit" id="submit">Submit</button></div>
+        <div class="column is-5"></div>
+      </div>
+      <div class="columns">
+        <div class="column is-4"></div>
+        <div class="column is-4 center blackbg"><h1 class="header-paragraph" id="result"></h1></div>
+        <div class="column is-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+  $(function() {
+    var update = function() {
+      $.ajax('https://votingapi.projectwyvern.com/summary')
+        .done(function(res) {
+          var against = res.against / 1e8;
+          var inFavor = res.inFavor / 1e8;
+          var total   = against + inFavor;
+          var supply  = res.supply  / 1e8;
+          $('#inFavor').text( (Math.round(inFavor * 100) / 100) + ' WYV (' + (Math.round(100 * inFavor / supply) / 100) + ' % of total supply)');
+          $('#against').text( (Math.round(against * 100) / 100) + ' WYV (' + (Math.round(100 * against / supply) / 100) + ' % of total supply)');
+          $('#total')  .text( (Math.round(total * 100) / 100) + ' WYV (' + (Math.round(100 * total / supply) / 100) + ' % of total supply)');
+        });
+    };
+    update();
+    setInterval(update, 5000);
+    $('#submit').click(function() {
+      console.log
+      $.ajax({
+        type: 'POST',
+        url: 'https://votingapi.projectwyvern.com/vote',
+        data: JSON.stringify({inFavor: document.getElementById('checkbox').checked, address: $('#address').val(), signature: $('#signature').val()}),
+        headers: {'Content-Type' : 'application/json'}
+      }).done(function(res) {
+        console.log(res);
+        if (res.success) {
+          $('#address').val('');
+          $('#signature').val(''); 
+          $('#result').text('Vote successful!');
+        } else {
+          $('#result').text('Vote failed - error: ' + JSON.stringify(res.error));
+        }
+        });
+    });
+  });
+  </script>
+  
+</body>
+</html>
