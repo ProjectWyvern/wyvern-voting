@@ -151,9 +151,9 @@
           var inFavor = res.inFavor / 1e8;
           var total   = against + inFavor;
           var supply  = res.supply  / 1e8;
-          $('#inFavor').text( (Math.round(inFavor * 100) / 100) + ' WYV (' + (Math.round(100 * inFavor / supply) / 100) + ' % of total supply)');
-          $('#against').text( (Math.round(against * 100) / 100) + ' WYV (' + (Math.round(100 * against / supply) / 100) + ' % of total supply)');
-          $('#total')  .text( (Math.round(total * 100) / 100) + ' WYV (' + (Math.round(100 * total / supply) / 100) + ' % of total supply)');
+          $('#inFavor').text( (Math.round(inFavor * 100) / 100) + ' WYV (' + (Math.round(10000 * inFavor / supply) / 100) + ' % of total supply)');
+          $('#against').text( (Math.round(against * 100) / 100) + ' WYV (' + (Math.round(10000 * against / supply) / 100) + ' % of total supply)');
+          $('#total')  .text( (Math.round(total * 100) / 100) + ' WYV (' + (Math.round(10000 * total / supply) / 100) + ' % of total supply)');
         });
     };
     update();
